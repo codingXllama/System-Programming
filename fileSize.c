@@ -10,7 +10,7 @@ Date: 16/10/19
 
 #include<unistd.h>
 #include<stdio.h>
-#include<fnctl.h>
+#include<fcntl.h>
 
 int main(int argc, char *argv[])
 {
@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
     fileSize = lseek(fd1, 0L, SEEK_END);
 
     // printing the result
-    printf("The file Size is: %d\n", fileSize);
+    printf("The file Size is: %ld\n", fileSize);
 
     // resetting the read-write file position pointer
-    lseek(fd1, fileSize, SEEK_CURR);
+    lseek(fd1, fileSize, SEEK_CUR);
 
     // closing the file stream
     close(fd1);
