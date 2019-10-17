@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     int fd1;
 
     // opening the file discriptor by passing in a "list1.txt" file to create it
-    fd1 = open("list1.txt", O_CREAT | O_WRONLY | O_TRUNC, 0700);
+    fd1 = open("list1.txt", O_CREAT | O_WRONLY | O_TRUNC, 0755);
 
     // checking the file discriptor if it's int value is greater than 0, then we will write the content onto the "list1.txt"
     //else we will just print the error to stderr (perror)
