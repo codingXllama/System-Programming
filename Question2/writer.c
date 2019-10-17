@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
     // checking the file discriptor if it's int value is greater than 0, then we will write the content onto the "list1.txt"
     //else we will just print the error to stderr (perror)
     //Note we are using ternary operator to check the required conditions
+    //We are using strlen() to write the same amount of chars we have in our string to fd1, note * you must insert the string.h header!!
     fd1 >0 ? write(fd1, "101   GM\tBuick\t2010\n102   Ford\tLincoln\t2005\n", strlen("101   GM\tBuick\t2010\n102   Ford\tLincoln\t2005\n")): perror("File error!");
 
     // closing file stream
